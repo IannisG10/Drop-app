@@ -1,6 +1,9 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 
 export default function Welcome() {
+
+    
+
     return(
         <View className="bg-vert w-full h-full flex justify-between">
 
@@ -17,9 +20,11 @@ export default function Welcome() {
             <View className="w-full h-[20%] flex justify-center items-center">
                 <View className="w-[200] h-[60] flex flex-row justify-between items-center gap-4 bg-blackPrimary rounded-full">
                     <Text className="text-white ml-[25%] font-syne-regular">Découvrir</Text>
+                    <TouchableOpacity className="w-[46] h-[46] mr-2 flex items-center justify-center bg-white rounded-full">
                     <View className="w-[46] h-[46] mr-2 flex items-center justify-center bg-white rounded-full">
                         <Image source={require("../../assets/icons/Right.png")} className="w-[30] h-[30]"/>
                     </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
