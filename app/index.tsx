@@ -7,6 +7,7 @@ import SelectAccount from "./views/select_account/selectAccount";
 import BuyerForm from "./views/buyer_form/buyerForm";
 import OnboardBuyer from "./views/onboardBuyer/onboardBuyer";
 import Seller from "./views/Seller/Seller";
+import AccountUser from "./views/AccountUser/AccountUser";
 
 export default function Index() {
   //Chargement de la police avant d'affiche l'ui
@@ -28,7 +29,8 @@ export default function Index() {
         {/* <SelectAccount></SelectAccount> */}
         {/* <BuyerForm></BuyerForm> */}
         {/* <OnboardBuyer></OnboardBuyer> */}
-        <Seller></Seller>
+        {/* <Seller></Seller> */}
+        <AccountUser></AccountUser>
       </View>
   );
 }
