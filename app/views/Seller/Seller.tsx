@@ -1,37 +1,58 @@
-import { useState } from "react";
-import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from "react-native";
+import { View, Image, Text, TextInput, ScrollView, Pressable } from "react-native";
 
-export default function Seller() {  
-    return (
-        <View className="w-full h-full bg-white p-[25] flex">
-            <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }} showsVerticalScrollIndicator={false}>
-                <View className="w-full h-[10%] flex justify-center">
-                    <Image source={require("../../assets/icons/Back.png")} className="w-[30] h-[30]"/>
+export default function Seller() {
+    return(
+        <View className="w-full h-full bg-white p-[25] flex gap-10">
+            <View className="w-full h-[10%] flex justify-center">
+                <Image source={require("../../assets/icons/Back.png")} className="w-[30] h-[30]"/>
+            </View>
+            <ScrollView>
+
+                <View className="w-[70%]">
+                    <Text className="text-4xl text-blackPrimary font-syne-bold">Devenir Vendeur</Text>
+                    <Text className="text-sm font-lato-regular mt-3">Veuillez remplir tous les champs, en entrant des informations valides</Text>
                 </View>
-                <View className="w-full flex justify-start gap-20">
-                    <View className="w-[70%]">
-                        <Text className="text-4xl text-blackPrimary font-syne-bold">Devenir un Acheteur</Text>
-                        <Text className="text-sm font-lato-regular mt-3">Veuillez remplir tous les champs, en entrant des informations valides</Text>
-                    </View>
-                    <View className="w-full h-full flex gap-5">
-                        <TextInput placeholder="" className="border border-gray-300 rounded-xl p-3 text-base text-black bg-white w-270 h-16" />
-                        <TextInput placeholder="" className="border border-gray-300 rounded-xl p-3 text-base text-black bg-white w-270 h-16" />
-                        <TextInput placeholder="" className="border border-gray-300 rounded-xl p-3 text-base text-black bg-white w-270 h-16" />
-                        <TextInput placeholder="" className="border border-gray-300 rounded-xl p-3 text-base text-black bg-white w-270 h-16" />
-                        <TextInput placeholder="" className="border border-gray-300 rounded-xl p-3 text-base text-black bg-white w-270 h-16" />
-                        <TextInput placeholder="" className="border border-gray-300 rounded-xl p-3 text-base text-black bg-white w-270 h-16" />
-                        <TextInput placeholder="" className="border border-gray-300 rounded-xl p-3 text-base text-black bg-white w-270 h-16" />
 
-                        <TouchableOpacity className="bg-lime-500 font-lato-bold rounded-xl w-270 h-16 justify-center items-center">
-                            <Text className="text-black">Confirmer</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity className="bg-blackPrimary text-white font-lato-bold rounded-xl w-270 h-16 flex-row justify-center items-center ">
-                            <Image source={require("../../assets/icons/Google.png")} className="w-[30] h-[30]"/>
-                            <Text className="text-white">Se connecter avec Google</Text>
-                        </TouchableOpacity>
-                    </View>
+                <View className="w-full gap-[25] mt-[50] mb-[20]">
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        placeholder="Nom"
+                    />
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        placeholder="Prénom"
+                    />
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        placeholder="Région"
+                    />
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        placeholder="Pays"
+                    />
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        placeholder="Adresse e-mail"
+                    />
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        placeholder="Mot de passe"
+                    />
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        placeholder="Confirmer le mot de passe"
+                    />
+
+                    <Pressable className="flex justify-center items-center bg-vert px-6 py-5 rounded-xl">
+                        <Text className="font-lato-bold text-lg">Confirmer</Text>
+                    </Pressable>
+
+                    <Pressable className="flex flex-row justify-center items-center bg-blackPrimary gap-[10] px-6 py-5 rounded-xl">
+                        <Image source={require("../../assets/icons/Google.png")} className="w-[30] h-[30]"/>
+                        <Text className="font-lato-bold text-lg text-white">Google</Text>
+                    </Pressable>
                 </View>
             </ScrollView>
         </View>
-    );
+    )
 }
