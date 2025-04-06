@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from "react-native";
 
-export default function Accountsuer() {  
+export default function Seller() {  
     return (
         <View className="w-full h-full bg-white p-[25] flex">
             <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }} showsVerticalScrollIndicator={false}>
