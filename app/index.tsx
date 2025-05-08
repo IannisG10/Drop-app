@@ -8,6 +8,8 @@ import BuyerForm from "./views/buyer_form/buyerForm";
 import OnboardBuyer from "./views/onboardBuyer/onboardBuyer";
 import Seller from "./views/Seller/Seller";
 import AccountUser from "./views/AccountUser/AccountUser";
+import Chat from "./views/Chat/Chat";
+import AccountList from "./Account_List/Account_List";
 
 export default function Index() {
   //Chargement de la police avant d'affiche l'ui
@@ -30,7 +32,8 @@ export default function Index() {
         {/* <BuyerForm></BuyerForm> */}
         {/* <OnboardBuyer></OnboardBuyer> */}
         {/* <Seller></Seller> */}
-        <AccountUser></AccountUser>
+        <AccountList></AccountList>
+        <Chat></Chat>
       </View>
   );
 }
