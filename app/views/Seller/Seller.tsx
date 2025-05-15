@@ -9,37 +9,41 @@ export default function Seller() {
             <ScrollView>
 
                 <View className="w-[70%]">
-                    <Text className="text-4xl text-blackPrimary font-syne-bold">Devenir Vendeur</Text>
-                    <Text className="text-sm font-lato-regular mt-3">Veuillez remplir tous les champs, en entrant des informations valides</Text>
+                    <Text className="text-5xl text-blackPrimary font-syne-bold">Devenir Vendeur</Text>
+                    <Text className="mt-3">Veuillez remplir tous les champs, en entrant des informations valides</Text>
                 </View>
 
                 <View className="w-full gap-[25] mt-[50] mb-[20]">
                     <TextInput
-                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
                         placeholder="Nom"
                     />
                     <TextInput
-                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
                         placeholder="Prénom"
                     />
                     <TextInput
-                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
                         placeholder="Région"
                     />
                     <TextInput
-                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
                         placeholder="Pays"
                     />
                     <TextInput
-                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
+                        placeholder="Numéro"
+                    />
+                    <TextInput
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
                         placeholder="Adresse e-mail"
                     />
                     <TextInput
-                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
                         placeholder="Mot de passe"
                     />
                     <TextInput
-                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl"
+                        className="w-full h-[60] pl-5 border border-blackPrimary rounded-xl font-lato-regular text-xl"
                         placeholder="Confirmer le mot de passe"
                     />
 

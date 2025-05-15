@@ -12,8 +12,8 @@ export default function SelectAccount(){
             </View>
             <View className="w-full h-[90%] flex justify-start gap-20">
                 <View className="w-[70%]">
-                    <Text className="text-4xl text-blackPrimary font-syne-bold">Veuillez créer un compte</Text>
-                    <Text className="text-sm font-lato-regular mt-3">Choisir ce que vous voulez devenir, en cliquant une des deux boutons</Text>
+                    <Text className="text-5xl text-blackPrimary font-syne-bold">Veuillez créer un compte</Text>
+                    <Text className="mt-3 text-xl">Choisir ce que vous voulez devenir, en cliquant une des deux boutons</Text>
                 </View>
                 <View className="w-full flex gap-10">
 

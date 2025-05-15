@@ -1,12 +1,13 @@
-import { Checkbox } from "@/app/components/checkbox/checkbox";
 import { useCallback, useState } from "react";
 import { View, Text, Image, Pressable } from "react-native";
+
+import Checkbox from "@/app/components/checkbox/checkbox";
 
 export default function OnboardBuyer(){
 
     const BestCuisine = 'Italian'
 
-    const Cuisines = new Array(20).fill(BestCuisine).map((cuisine, i) => ({
+    const Cuisines = new Array(10).fill(BestCuisine).map((cuisine, i) => ({
         id: i,
         name: cuisine,
         selected: false
@@ -33,13 +34,13 @@ export default function OnboardBuyer(){
             <View className="w-full h-[10%] flex justify-center">
                 <Image source={require("../../assets/icons/Back.png")} className="w-[30] h-[30]"/>
             </View>
-            <View className="w-full h-[90%] flex justify-start gap-20">
+            <View className="w-full h-[70%] flex items-start gap-20">
                 <View className="w-[70%]">
-                    <Text className="text-4xl text-blackPrimary font-syne-bold">Préférence de produits</Text>
-                    <Text className="text-sm font-lato-regular mt-3">Choisis les produits que vous aimez pour que DropShop vous les recommande</Text>
+                    <Text className="text-5xl text-blackPrimary font-syne-bold">Préférence de produits</Text>
+                    <Text className="mt-3 text-xl">Choisis les produits que vous aimez pour que DropShop vous les recommande</Text>
                 </View>
-                <View className="w-full h-full flex">
-                    <View className="h-full w-full flex flex-row flex-wrap gap-[14]">
+                <View className="w-full flex">
+                    <View className="h-fit w-full flex flex-row flex-wrap gap-[14]">
                         {cuisines.map((cuisine) => {
                             return (
                                 <Checkbox 
@@ -54,6 +55,11 @@ export default function OnboardBuyer(){
                         })}
                     </View>
                 </View>
+            </View>
+            <View className="w-full h-[10%] flex justify-center items-center">
+                <Pressable className="w-full h-[60] flex justify-center items-center bg-vert px-6 py-5 rounded-xl">
+                    <Text className="font-lato-bold text-lg">Confirmer</Text>
+                </Pressable>
             </View>
         </View>
     )

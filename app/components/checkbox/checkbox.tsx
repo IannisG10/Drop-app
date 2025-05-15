@@ -7,7 +7,7 @@ type CheckboxProps = {
     onPress : () => void
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({label, checked, onPress}) => {
+const Checkbox: React.FC<CheckboxProps> = ({label, checked, onPress}) => {
 
     return(
         <View 
@@ -21,7 +21,9 @@ export const Checkbox: React.FC<CheckboxProps> = ({label, checked, onPress}) => 
                     </View>
                 )
             }
-            <Text className={`${checked ? 'color-white' : 'color-black'} text-sm font-lato-regular`}>{label}</Text>
+            <Text className={`${checked ? 'color-white' : 'color-black'} text-xl`}>{label}</Text>
         </View>
     )
 }
+
+export default Checkbox;
