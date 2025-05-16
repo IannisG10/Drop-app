@@ -1,12 +1,20 @@
 import { View, Image, Text, TextInput, ScrollView, Pressable } from "react-native";
+import { useRouter } from 'expo-router';
 
 export default function BuyerForm() {
+
+    const router = useRouter();
+
+    const handleGoBack = () => {
+        router.back();
+    };
+
     return(
         <View className="w-full h-full bg-white p-[25] flex gap-10">
-            <View className="w-full h-[10%] flex justify-center">
-                <Image source={require("../../assets/icons/Back.png")} className="w-[30] h-[30]"/>
-            </View>
-            <ScrollView className="w-full">
+            <Pressable onPress={handleGoBack} className="w-full h-[10%] flex justify-center">
+                <Image source={require("./assets/icons/Back.png")} className="w-[30] h-[30]"/>
+            </Pressable>
+            <ScrollView className="w-full" showsVerticalScrollIndicator={false}>
 
                 <View className="w-[70%]">
                     <Text className="text-5xl text-blackPrimary font-syne-bold">Devenir Acheteur</Text>
@@ -47,12 +55,12 @@ export default function BuyerForm() {
                         placeholder="Confirmer le mot de passe"
                     />
 
-                    <Pressable className="w-full h-[60] flex justify-center items-center bg-vert px-6 py-5 rounded-xl">
+                    <Pressable onPress={() => router.push('/onboardBuyer')} className="w-full h-[60] flex justify-center items-center bg-vert px-6 py-5 rounded-xl">
                         <Text className="font-lato-bold text-lg">Confirmer</Text>
                     </Pressable>
 
                     <Pressable className="w-full h-[60] flex flex-row justify-center items-center bg-blackPrimary gap-[10] px-6 py-5 rounded-xl">
-                        <Image source={require("../../assets/icons/Google.png")} className="w-[30] h-[30]"/>
+                        <Image source={require("./assets/icons/Google.png")} className="w-[30] h-[30]"/>
                         <Text className="font-lato-bold text-lg text-white">Google</Text>
                     </Pressable>
                 </View>

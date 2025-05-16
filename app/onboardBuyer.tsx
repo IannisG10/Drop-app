@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { View, Text, Image, Pressable } from "react-native";
+import { useRouter } from 'expo-router';
 
 import Checkbox from "@/app/components/checkbox/checkbox";
 
@@ -29,11 +30,17 @@ export default function OnboardBuyer(){
         })
     }, [])
 
+    const router = useRouter();
+
+    const handleGoBack = () => {
+        router.back();
+    };
+
     return(
         <View className="w-full h-full bg-white p-[25] flex gap-10">
-            <View className="w-full h-[10%] flex justify-center">
-                <Image source={require("../../assets/icons/Back.png")} className="w-[30] h-[30]"/>
-            </View>
+            <Pressable onPress={handleGoBack} className="w-full h-[10%] flex justify-center">
+                <Image source={require("./assets/icons/Back.png")} className="w-[30] h-[30]"/>
+            </Pressable>
             <View className="w-full h-[70%] flex items-start gap-20">
                 <View className="w-[70%]">
                     <Text className="text-5xl text-blackPrimary font-syne-bold">Préférence de produits</Text>
@@ -57,7 +64,7 @@ export default function OnboardBuyer(){
                 </View>
             </View>
             <View className="w-full h-[10%] flex justify-center items-center">
-                <Pressable className="w-full h-[60] flex justify-center items-center bg-vert px-6 py-5 rounded-xl">
+                <Pressable onPress={() => router.push('/accueil')} className="w-full h-[60] flex justify-center items-center bg-vert px-6 py-5 rounded-xl">
                     <Text className="font-lato-bold text-lg">Confirmer</Text>
                 </Pressable>
             </View>

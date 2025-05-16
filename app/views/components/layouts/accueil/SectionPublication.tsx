@@ -51,13 +51,11 @@ const SectionPublicationsAccueil = () => {
             <PublicationAccueil
                 {...publication1Data}
                 iconStarSource={require("../../../../assets/icons/Star.png")}
-                iconHeartSource={require("../../../../assets/icons/Heart.png")}
                 iconCommentSource={require("../../../../assets/icons/Comments.png")}
             />
             <PublicationAccueil
                 {...publication2Data}
                 iconStarSource={require("../../../../assets/icons/Star.png")}
-                iconHeartSource={require("../../../../assets/icons/Heart.png")}
                 iconCommentSource={require("../../../../assets/icons/Comments.png")}
             />
         </View>

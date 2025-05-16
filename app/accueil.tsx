@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { View, ScrollView } from "react-native"
-import NavigationBottom from "../components/navigation"
+import NavigationBottom from "./views/components/navigation"
 
-import HeaderAccueil from "../components/layouts/accueil/Header";
-import ProduitLocal from "../components/layouts/accueil/ProduitLocal"
-import SectionCategories from "../components/layouts/accueil/Categorie"
-import SectionAnnonce from "../components/layouts/accueil/AnnonceInput"
-import SectionPublicationsAccueil from "../components/layouts/accueil/SectionPublication";
-import SectionVendeursRecommandes from "../components/layouts/accueil/VendeurRecommandation";
+import HeaderAccueil from "./views/components/layouts/accueil/Header";
+import ProduitLocal from "./views/components/layouts/accueil/ProduitLocal"
+import SectionCategories from "./views/components/layouts/accueil/Categorie"
+import SectionAnnonce from "./views/components/layouts/accueil/AnnonceInput"
+import SectionPublicationsAccueil from "./views/components/layouts/accueil/SectionPublication";
+import SectionVendeursRecommandes from "./views/components/layouts/accueil/VendeurRecommandation";
 
 export default function Accueil() {
 
